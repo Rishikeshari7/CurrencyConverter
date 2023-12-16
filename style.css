@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    font-size: 4rem;
+    margin-top: 5rem;
+}
+body{
+    background-color: #be5d7b;
+}
+main{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+section{
+    font-size: 1.5rem;
+    background-color: #fff;
+    margin-top: 5rem;
+    display: flex;
+    height: 20rem;
+    width: 18rem;
+    justify-content: center;
+    border-radius: 1.5rem;
+}
+form{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.dropdown-container{
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+.dropdown-container i{
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+}
+section p{
+    margin-top: 1rem;
+    text-align: center;
+}
+button{
+    all: unset;
+    background-color: #0e415e;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    font-size: 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+.msg{
+    font-size: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+input{
+    all: unset;
+    border: 1px solid #0e415e;
+    border-radius: 15px;
+    width: 80%;
+}
+select{
+    border: 1px solid #0e415e;
+    border-radius: 15px;
+    padding: 0.2rem;
+}
+img{
+    height: 3rem;
+}
