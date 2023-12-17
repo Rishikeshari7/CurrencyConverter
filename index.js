@@ -30,9 +30,9 @@ dropMenu.forEach((ele)=>{
         updateFlag(evt.target);
         // console.log("from ->",fromCurr.value);
         // console.log("to ->",toCurr.value);
+        currencyConverter(fromCurr.value,toCurr.value);
     });
 });
-
 const updateFlag=(choseOption)=>{
     let optionValue=choseOption.value;
     let flag=countryList[optionValue];
@@ -42,8 +42,35 @@ const updateFlag=(choseOption)=>{
     img.src=newSrc;
 }
 
-const URL =
+// let amount=inputValue.value;
+const url =
   "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies";
-// async function currencyConverter(){
-//     let response =await fetch(`${URL}/`)
-// }
+    async function currencyConverter(from,to){
+        let response = await fetch(`${url}/${from.toLowerCase()}/${to.toLowerCase()}.json`);
+        // console.log(response);
+        let data=await response.json();
+        let rate=data[to.toLowerCase()];
+        
+        
+    //    let finalExchange=amount*rate;
+       
+            let button=document.querySelector("button");
+            button.addEventListener("click",(evt)=>{
+            evt.preventDefault();
+            const amount=document.querySelector("input").value;
+            const finalExchange=amount*rate;
+            console.log(rate, amount);
+            let msgShow=document.querySelector(".msg");
+            msgShow.innerHTML=`${amount} <i>${from}</i>=${finalExchange.toFixed(2)} <i>${to}</i>`;
+            console.log("button touch");
+            console.log(from)
+    // generateMoney();
+            });
+    };
+    window.addEventListener("load", () => {
+        currencyConverter(fromCurr.value,toCurr.value);
+      });
+
+    
+
+
