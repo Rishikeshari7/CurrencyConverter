@@ -64,7 +64,6 @@ const url =
             msgShow.innerHTML=`${amount} <i>${from}</i>=${finalExchange.toFixed(2)} <i>${to}</i>`;
             console.log("button touch");
             console.log(from)
-    // generateMoney();
             });
     };
     window.addEventListener("load", () => {
